@@ -1,0 +1,33 @@
+Let's start with the why in text format.
+We are an engineering company called the Umbral Uplink Syndicate.
+One day we are approach by a team of scientist that feel the need to study a farm on the far side of the moon. 
+Their intentions being exploring the ability to grow food for any future space colonies. The interest arises from the unique materials that
+can only be found there.
+
+The scientists have already proposed their project with the government which are interested in the outcome of this experiment and already given 
+funding for it. They already designed a light weight 20T module for which we are called upon to land it safely on the far side of Mun with no
+intentions of returning it back to earth. Instead they require a permanent decent bandwidth 2-way communication link to the module. 
+
+As we are space communication and transport experts we started with laying out the requirements:
+- 20T Lunar landing no return
+- Permanent Communication
+
+The first part we are fairly certain we can achieve since the Saturn 5 missions 60 years ago managed to land a similar mass on the Moon (and return)
+On the other hand the permanent communication can be quite a bit trickier. To this end we started with a feasibility assessment, a proof of principle.
+We know that the far-side of the moon always remains the same as the moon is tidally locked to our planet, which must also mean that it's axis of rotation
+should be perpendicular to the orbiting plane. Two problems arise, the line of sight (LOS) to the module from any point on earth is always obstructed by
+the mass of the Moon and half of the earth's surface LOS to the Moon is obstructed by the earth itself. 
+We make the assumption that we can use the earth's powerful satellite system to counteract the second problem making sure we always have a LOS 
+to the moon. We also need to a something that can communicate with the farm. 
+2 directions arrived: 
+1. We deploy multiple transceivers on the near-side of Moon surface which connect to each other to eventually reach the far side of the moon.
+2. We use a polar orbiting satellite to which is always in LOS of the earth and the moon. 
+
+Both deployments require a difference in positional placement of the farm within the far-side of the moon.
+1. Place the farm as close to the near side as possible to reduce the amount of relays needed
+2. Place the farm as close in the middle of the far side to attain the lowest consistent gracing angle.
+
+Currently the second option seems favorable but requires some measurements. The height of the polar orbit determines the minimal gracing angle which
+in turn determines the height of the antenna receiver. if the antenna receiver length presumes to be possible it will make option 2 highly favorable.
+
+Some geometry can help us solve this question, the sphere of influence of the moon is 2500km while it's radius is 200km. 
