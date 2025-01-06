@@ -769,16 +769,20 @@
               id="d9aab154-8e2e-4b72-85b0-bc31e71a6341" name="Farm deployment">
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
                 id="77d5e8d1-754d-4e3f-b6b9-9c74db38778d" involved="#c427a35e-1357-478d-b604-824e261e8d5f"
-                source="#cd2a4693-118d-4f0b-8b54-f1ca3d496078" target="#c43f9410-159b-4b3f-a996-7d73b0285744"/>
+                source="#cd2a4693-118d-4f0b-8b54-f1ca3d496078" target="#6219a784-c453-4e59-8dc0-4ca87a07eaa1"/>
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
                 id="c43f9410-159b-4b3f-a996-7d73b0285744" involved="#3aa06a8d-9f37-48e5-b2a2-e9515d1fcb4a"/>
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
                 id="cd2a4693-118d-4f0b-8b54-f1ca3d496078" involved="#41a7994a-7d8b-40cc-a273-1ebc9fe3b4dd"/>
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
                 id="15da1c6a-1617-4180-acba-dac1a5e0b742" involved="#bbef73e6-f173-4bf9-a42d-968a618ce4f2"
-                source="#c43f9410-159b-4b3f-a996-7d73b0285744" target="#08dfe363-f575-4c0b-86db-424a1bb488b3"/>
+                source="#39401c14-3e85-4dbf-a046-7a9f3e2e9a1c" target="#08dfe363-f575-4c0b-86db-424a1bb488b3"/>
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
                 id="08dfe363-f575-4c0b-86db-424a1bb488b3" involved="#99aad981-9891-4dab-84ca-a9f24655cc0f"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="6219a784-c453-4e59-8dc0-4ca87a07eaa1" involved="#26cf9fca-9c6a-456b-990e-99b0a94e3da6"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="39401c14-3e85-4dbf-a046-7a9f3e2e9a1c" involved="#781cdd5d-4176-4eee-9e7f-67734b29b683"/>
           </ownedFunctionalChains>
           <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.fa:FunctionalChain"
               id="3f571b7c-374f-4c9d-925f-8c55fcbd9f1a" name="Communication system deployment">
@@ -1159,13 +1163,71 @@
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="3aa06a8d-9f37-48e5-b2a2-e9515d1fcb4a" name="Execute Mun Landing">
-            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="db22031c-8b1e-41b3-9818-7fa9c6ae6e82" name="inFarm with lander in Mun orbit"/>
-            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="5bd38932-2362-4523-aaaf-886e22c2d6b5" name="outFarm module on Mun"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="26cf9fca-9c6a-456b-990e-99b0a94e3da6" name="Slow down for deorbit">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="db22031c-8b1e-41b3-9818-7fa9c6ae6e82" name="inFarm with lander in Mun orbit"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="d24e6d36-8dd6-46c6-9f8b-a262c52c871b" name="FOP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="85483098-70cf-4c3a-8148-5ad116541a63" name="FOP 2"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="152fe290-d91c-40fe-889a-d819a0f11e8c" name="FOP 3"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="e0cd5052-76ef-41f7-9e95-6bd726f18eef" name="Control heat" summary="Manage the heat">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="3366aecc-8366-4d1e-8bee-1bf075c6a0b4" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="8c097b0f-e95e-4d18-998b-fb3057ff6287" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="da7ed965-8827-4f4b-b8c2-9ea33c96c874" name="control orientation"
+                summary="Make sure the ship can maintain the orientation">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="d6284ce4-eff2-480a-a972-bb350c9e8866" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="e2e807ca-8546-4cfe-a115-d63f0cfbb8d4" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="dc26c7f9-fe7c-4abd-9359-6409cd9748ed" name="Control speed" summary="Make sure we can slow down for soft impact">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="3326f438-bbce-4d2d-8dd8-8adad42bb021" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="b88a7ecb-b249-4741-94d4-ed345bbe278c" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="781cdd5d-4176-4eee-9e7f-67734b29b683" name="Land safely">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="47b13286-665b-4ddf-a6d8-6e2fbc78ccd0" name="FIP 1"/>
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="62cf42d2-6774-4c54-b6b5-002625bb49e6" name="FIP 2"/>
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="3fc2f346-a00a-450d-844e-7e5760b10baa" name="FIP 3"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="5bd38932-2362-4523-aaaf-886e22c2d6b5" name="outFarm module on Mun"/>
+            </ownedFunctions>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="673157c7-2d45-49b7-bf86-56ce7ee587e0" targetElement="#1941f303-91e5-4af3-aee2-0ef4962fc692"
                 sourceElement="#3aa06a8d-9f37-48e5-b2a2-e9515d1fcb4a"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="176f4aad-f4d0-40ed-99ae-641b45743eb0" name="deorbiting lander"
+                target="#3366aecc-8366-4d1e-8bee-1bf075c6a0b4" source="#d24e6d36-8dd6-46c6-9f8b-a262c52c871b"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="18eddabe-0690-46aa-9019-da298d1cc2ae" name="deorbiting lander"
+                target="#d6284ce4-eff2-480a-a972-bb350c9e8866" source="#85483098-70cf-4c3a-8148-5ad116541a63"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="e783d8cf-0aaf-4cf3-9cec-c59b627310a8" name="deorbiting lander"
+                target="#3326f438-bbce-4d2d-8dd8-8adad42bb021" source="#152fe290-d91c-40fe-889a-d819a0f11e8c"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="2fd9cd86-ac48-4c1c-8e79-418002d70190" name="Controlled orientation"
+                target="#47b13286-665b-4ddf-a6d8-6e2fbc78ccd0" source="#e2e807ca-8546-4cfe-a115-d63f0cfbb8d4"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="9cf64cec-52f4-4193-b61d-b20eac4f4016" name="Controlled speed"
+                target="#62cf42d2-6774-4c54-b6b5-002625bb49e6" source="#b88a7ecb-b249-4741-94d4-ed345bbe278c"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="7f586e92-8d8a-42ce-ba1d-701981d26324" name="None burned down vehicle"
+                target="#3fc2f346-a00a-450d-844e-7e5760b10baa" source="#8c097b0f-e95e-4d18-998b-fb3057ff6287"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="99aad981-9891-4dab-84ca-a9f24655cc0f" name="Activate communication system">
@@ -1563,6 +1625,16 @@
               id="ba9fce02-d14c-413c-a673-4ea9f927c351" involved="#3aa06a8d-9f37-48e5-b2a2-e9515d1fcb4a"/>
           <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
               id="69780b16-cfc1-4994-9873-40e2fca2ed44" involved="#f31660df-5e34-4b51-ac2e-1ca36911d2e3"/>
+          <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
+              id="58635926-43d5-4caf-8fd4-0af7b60ca176" involved="#26cf9fca-9c6a-456b-990e-99b0a94e3da6"/>
+          <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
+              id="bd7e1600-cce7-4f46-9e1e-d5064e0e1143" involved="#e0cd5052-76ef-41f7-9e95-6bd726f18eef"/>
+          <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
+              id="c91db607-b6d8-4327-8bc6-d48a01bdffa9" involved="#da7ed965-8827-4f4b-b8c2-9ea33c96c874"/>
+          <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
+              id="c4e793e5-4a38-44d8-bbc3-ed8edc2cc636" involved="#dc26c7f9-fe7c-4abd-9359-6409cd9748ed"/>
+          <ownedAbstractFunctionAbstractCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.interaction:AbstractFunctionAbstractCapabilityInvolvement"
+              id="4040bf1c-4966-4258-929d-5f9adee8604e" involved="#781cdd5d-4176-4eee-9e7f-67734b29b683"/>
           <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
               id="4d1b45d5-7b4a-421b-a934-0b0107802793" involved="#939d6203-969e-42dd-8d90-a17a2ecc6577"/>
           <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
