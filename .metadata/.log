@@ -1,0 +1,136 @@
+!SESSION 2025-01-03 14:49:29.699 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/personal/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -data /Users/personal/projects/MBSE -keyring /Users/personal/.eclipse_keyring
+
+!ENTRY org.eclipse.gmf.runtime.common.ui 4 0 2025-01-04 11:30:38.560
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.gmf.runtime.common.ui.internal.CommonUIPlugin.stop() of bundle org.eclipse.gmf.runtime.common.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Shell.isDisposed()" because the return value of "org.eclipse.gmf.runtime.common.ui.util.UIModificationValidator$WindowListener.getShell()" is null
+	at org.eclipse.gmf.runtime.common.ui.util.UIModificationValidator.dispose(UIModificationValidator.java:208)
+	at org.eclipse.gmf.runtime.common.ui.internal.CommonUIPlugin.stop(CommonUIPlugin.java:84)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Shell.isDisposed()" because the return value of "org.eclipse.gmf.runtime.common.ui.util.UIModificationValidator$WindowListener.getShell()" is null
+	at org.eclipse.gmf.runtime.common.ui.util.UIModificationValidator.dispose(UIModificationValidator.java:208)
+	at org.eclipse.gmf.runtime.common.ui.internal.CommonUIPlugin.stop(CommonUIPlugin.java:84)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+!SESSION 2025-01-04 16:00:16.561 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/personal/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/personal/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-01-04 16:00:21.039
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2025-01-07 21:54:10.436 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/personal/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/personal/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-01-07 21:54:13.152
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 0 2025-01-07 21:56:50.310
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: begin 0, end 8, length 7
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4606)
+	at java.base/java.lang.String.substring(String.java:2709)
+	at org.eclipse.draw2d.text.TextFlow.getBidiSubstring(TextFlow.java:215)
+	at org.eclipse.gmf.runtime.draw2d.ui.text.TextFlowEx.paintFigure(TextFlowEx.java:158)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1174)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1247)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1252)
+	at org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel.paintClientArea(WrappingLabel.java:1105)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1256)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.sirius.diagram.ui.internal.edit.parts.SiriusNoteEditPart$1.paint(SiriusNoteEditPart.java:143)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1252)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1252)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1252)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1221)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1252)
+	at org.eclipse.draw2d.ScalableFreeformLayeredPane.paintClientArea(ScalableFreeformLayeredPane.java:70)
+	at org.eclipse.gmf.runtime.draw2d.ui.internal.graphics.ScalableFreeformLayeredPane.paintClientArea(ScalableFreeformLayeredPane.java:82)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1176)
+	at org.eclipse.draw2d.parts.Thumbnail$ThumbnailUpdater.run(Thumbnail.java:193)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4368)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3991)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.polarsys.capella.core.platform.sirius.ui.app.CapellaApplication.start(CapellaApplication.java:118)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)

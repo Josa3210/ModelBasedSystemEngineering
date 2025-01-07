@@ -1,0 +1,20 @@
+#Tue Jan 07 21:03:20 CET 2025
+print.useInches=true
+rulergrid.rulerunit=2
+print.margin.left=0.5
+viewport.x=480
+rulergrid.gridlinestyle=6
+viewport.y=95
+zoom=1.0
+print.usePortrait=true
+print.page.height=11.0
+print.page.width=8.5
+rulergrid.snaptogrid=true
+print.margin.bottom=0.5
+rulergrid.snaptogeometry=true
+print.margin.top=0.5
+print.margin.right=0.5
+rulergrid.gridlevel=true
+print.page.size=Letter
+rulergrid.gridspacing=10.0
+rulergrid.gridlinecolor=12632256
